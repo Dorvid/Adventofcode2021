@@ -6,7 +6,8 @@ import string
 
 tempfile = open("inputDay1.txt")
 input = tempfile.readlines()
-data = [[int(val) for val in line.split()]for line in input]
+#data = [[int(val) for val in line.split()]for line in input]
+data = list(map(int,input))
 cnt = 0
 
 print(data)
