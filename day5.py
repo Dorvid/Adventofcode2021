@@ -45,8 +45,8 @@ for line in input:
             line_map[x][y] += 1
             if x == vals[2] and y == vals[3]:
                 break
-            x += x_inc if (x != vals[2]) else 0
-            y += y_inc if (y != vals[3]) else 0
+            x += x_inc #if (x != vals[2]) else 0
+            y += y_inc #if (y != vals[3]) else 0
 
 
 cnt = 0
@@ -58,6 +58,5 @@ for i in range(1000):
            
 
 print("Answer: " + str(cnt))
-
 
 time.sleep(10)
