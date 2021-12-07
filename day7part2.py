@@ -9,7 +9,6 @@ def calc_fuel(x,y):
     n = abs(x-y)
     return int(n*(n+1)/2)
     
-
 tempfile = open("inputDay7.txt")
 first_line = tempfile.readline()
 temp_num_list = first_line.split(',')
@@ -29,7 +28,5 @@ for i in range(biggest_num):
         fuel += calc_fuel(i,key) * num_dict[key]
     
     min_fuel = fuel if min_fuel == -1 or fuel < min_fuel else min_fuel
-
-
 
 print(f"Answer: {min_fuel}")
