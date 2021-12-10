@@ -8,7 +8,12 @@ tempfile = open("inputDay10.txt")
 lines = tempfile.readlines()
 
 scores = []
-
+value_dict = {
+    ')': 1,
+    ']': 2,
+    '}': 3,
+    '>': 4
+}
 for line in lines:
     letter_queue = []
     line = line.rstrip('\n')
@@ -39,14 +44,7 @@ for line in lines:
     for expected in reversed(letter_queue):
         curr_score *= 5
         letter = letter_queue.pop()
-        if letter == ')':
-            curr_score += 1
-        if letter == ']':
-            curr_score += 2
-        if letter == '}':
-            curr_score += 3
-        if letter == '>':
-            curr_score += 4
+        curr_score += value_dict[letter]
     scores.append(curr_score)
 scores.sort()
 middle = int((len(scores)/2))
